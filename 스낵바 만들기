@@ -35,7 +35,9 @@ class MyPage extends StatelessWidget {
                   'Show me',
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.red,
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.green
+                ),
                 onPressed: () {
                   ScaffoldMessenger.of(ctx).showSnackBar(SnackBar(
                     content: Text('Hellow'),
