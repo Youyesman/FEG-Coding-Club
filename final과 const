@@ -1,0 +1,62 @@
+void main() {
+ 
+  final int myFianl = 30;
+  const int myConst = 70;
+  
+  
+  // final, const : 변수값이 초기화되면 바꿀 수 없게 하는 것.
+    
+  myFianl = 20;
+  myConst = 50;
+  
+  // 이렇게 새로운 값을 할당하게 되면 에러가 발생함 , 초기화 된 이후에는 
+  // 변하지 않는 immutable 한 것이 된다.
+  
+ 
+  // 그러면 final과 const는 무슨 차이가 있을까?
+  // final값을 초기화 하는 방법은 2가지이다.
+  //  1: 변수 선언시 초기화(위와 같이)
+  //  2: 객체 생성시 외부 데이터를 받아서 초기화
+  
+  // 2번째 방법: 
+  
+  
+    
+  
+}
+
+class Person{
+
+  final int age;
+  String name;
+  
+  Person(this.age , this.name);  // 이게 생성자
+}
+
+void main(){
+  
+  Person p1 = new Person(21,'Tom');
+  print(p1.age);
+  
+}
+
+
+// 앱이 스마트폰에서 실행 되고 사용자가 원하는 질문을 선택한 순간 앱이 초기화 된다.
+// 앱이 실행이 되는 시점에 질문이 정해지면 value 값이 바뀌지 않음.
+// run-time const. 
+// 두번째로 다른 질문을 선택한다면? -> 사용자가 선택한 다른 질문으로 바뀌어야 한다.
+// response변수: 컴파일 시에는 변수값이 초기화 되지 않고, 앱이 실행된 후 웹상에서 데이터가 전송될때까지 기다렸다가(await) 그 후에 값이 저장이 된다.
+
+
+// const 변수: compile-time constant는 컴파일 시에 상수가 된다.
+// const변수는 반드시 선언과 동시에 초기화. 
+
+const time = DateTime.now();
+
+// 컴파일 이후에 값이 저장되어야 하는 value 값을 할당하면 에러를 발생시킨다.
+
+
+// const변수는 컴파일 시에 상수화
+// final 변수는 런타임 시에 상수화
+// compile time constant = run-time constant
+// final변수는 rebuild 될 수 있음
